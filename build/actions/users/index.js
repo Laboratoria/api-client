@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.userProfile = exports.userFeed = exports.userCohorts = void 0;
+exports.getAdmissionData = exports.userProfile = exports.userFeed = exports.userCohorts = void 0;
 
 var _helpers = require("../helpers");
 
@@ -48,3 +48,17 @@ const userProfile = ({
 });
 
 exports.userProfile = userProfile;
+
+const getAdmissionData = ({
+  email,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'USER_ADMISSION_DATA',
+  url: `/users/${email}/admission-data`,
+  method: 'GET',
+  key: `user/${email}/admission-data`,
+  expiration: 1000 * 60 * 5,
+  ...rest
+});
+
+exports.getAdmissionData = getAdmissionData;
