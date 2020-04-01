@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`updateProfile should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "update-my-profile",
+    "namespace": "default",
+    "suffix": "UPDATE_MY_PROFILE",
+  },
+  "payload": Object {
+    "data": "someone",
+    "headers": undefined,
+    "method": "PATCH",
+    "params": undefined,
+    "url": "/me/profile",
+  },
+  "type": "@@api-client/API_REQUEST/UPDATE_MY_PROFILE",
+}
+`;
