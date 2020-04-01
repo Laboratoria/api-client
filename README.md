@@ -401,4 +401,25 @@ Get user's Admission data.
 
 ##### Params
 - `email`: Email to get the Admission data.
+
+#### `getUser({ user, ...rest })`
+Get user's profile.
+
+##### Params
+- `user`: User ID or email to get the academic profile from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `updateProfileEndorsement({ user, data, ...rest })`
+Creates or updates an endorsement of an user given by an admin user.
+
+##### Params
+- `user`: User ID or email to get the academic profile from.
+- `data`: Text endorsement.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `deleteProfileEndorsement({ user, ...rest })`
+Deletes an endorsement given by an admin user
+
+##### Params
+- `user`: User ID or email to get the academic profile from.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
