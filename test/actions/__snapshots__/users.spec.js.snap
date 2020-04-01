@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`deleteProfileEndorsement should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "delete-profile-endorsement",
+    "namespace": "default",
+    "suffix": "DELETE_PROFILE_ENDORSEMENT",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "DELETE",
+    "params": undefined,
+    "url": "/users/someone/profile/endorsements",
+  },
+  "type": "@@api-client/API_REQUEST/DELETE_PROFILE_ENDORSEMENT",
+}
+`;
+
 exports[`getAdmissionData should create an appropriate action 1`] = `
 Object {
   "meta": Object {
@@ -17,6 +37,66 @@ Object {
     "url": "/users/someone/admission-data",
   },
   "type": "@@api-client/API_REQUEST/USER_ADMISSION_DATA",
+}
+`;
+
+exports[`getUser should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "user/someone",
+    "namespace": "default",
+    "suffix": "USER_PROFILE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone",
+  },
+  "type": "@@api-client/API_REQUEST/USER_PROFILE",
+}
+`;
+
+exports[`updateProfileEndorsement should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "update-profile-endorsement",
+    "namespace": "default",
+    "suffix": "UPDATE_PROFILE_ENDORSEMENT",
+  },
+  "payload": Object {
+    "data": "someone",
+    "headers": undefined,
+    "method": "PUT",
+    "params": undefined,
+    "url": "/users/someone/profile/endorsements",
+  },
+  "type": "@@api-client/API_REQUEST/UPDATE_PROFILE_ENDORSEMENT",
+}
+`;
+
+exports[`updateUser should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-update/someone",
+    "namespace": "default",
+    "suffix": "USER_PROFILE_UPDATE",
+  },
+  "payload": Object {
+    "data": "someone",
+    "headers": undefined,
+    "method": "PATCH",
+    "params": undefined,
+    "url": "/users/someone/profile",
+  },
+  "type": "@@api-client/API_REQUEST/USER_PROFILE_UPDATE",
 }
 `;
 
