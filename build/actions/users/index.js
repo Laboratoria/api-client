@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getAdmissionData = exports.userProfile = exports.userFeed = exports.userCohorts = void 0;
+exports.deleteProfileEndorsement = exports.updateProfileEndorsement = exports.updateUser = exports.getUser = exports.getAdmissionData = exports.userProfile = exports.userFeed = exports.userCohorts = void 0;
 
 var _helpers = require("../helpers");
 
@@ -39,7 +39,7 @@ const userProfile = ({
   user,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'USER_PROFILE',
+  type: 'PROFILE',
   url: `/users/${user}/profile`,
   method: 'GET',
   key: `user/${user}/profile`,
@@ -62,3 +62,59 @@ const getAdmissionData = ({
 });
 
 exports.getAdmissionData = getAdmissionData;
+
+const getUser = ({
+  user,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'USER_PROFILE',
+  url: `/users/${user}`,
+  method: 'GET',
+  key: `user/${user}`,
+  ...rest
+});
+
+exports.getUser = getUser;
+
+const updateUser = ({
+  user,
+  data,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'USER_PROFILE_UPDATE',
+  url: `/users/${user}/profile`,
+  method: 'PATCH',
+  data,
+  key: `profile-update/${user}`,
+  ...rest
+});
+
+exports.updateUser = updateUser;
+
+const updateProfileEndorsement = ({
+  user,
+  data,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'UPDATE_PROFILE_ENDORSEMENT',
+  url: `/users/${user}/profile/endorsements`,
+  method: 'PUT',
+  data,
+  key: 'update-profile-endorsement',
+  ...rest
+});
+
+exports.updateProfileEndorsement = updateProfileEndorsement;
+
+const deleteProfileEndorsement = ({
+  user,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'DELETE_PROFILE_ENDORSEMENT',
+  url: `/users/${user}/profile/endorsements`,
+  method: 'DELETE',
+  key: 'delete-profile-endorsement',
+  ...rest
+});
+
+exports.deleteProfileEndorsement = deleteProfileEndorsement;

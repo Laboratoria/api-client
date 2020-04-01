@@ -40,6 +40,18 @@ Object.keys(_feedback).forEach(function (key) {
   });
 });
 
+var _me = require("./me");
+
+Object.keys(_me).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _me[key];
+    }
+  });
+});
+
 var _profile = require("./profile");
 
 Object.keys(_profile).forEach(function (key) {
