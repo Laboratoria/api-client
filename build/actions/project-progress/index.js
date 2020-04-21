@@ -40,13 +40,12 @@ exports.addProjectProgress = addProjectProgress;
 const updateProjectProgress = ({
   cohortId,
   projectId,
-  data,
+  progressId,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
   type: 'PROJECT_PROGRESS_UPDATE',
-  url: `/cohorts/${cohortId}/projects/${projectId}/`,
-  me_progressthod: 'PUT',
-  data,
+  url: `/cohorts/${cohortId}/projects/${projectId}/progress/${progressId}/ready`,
+  method: 'PUT',
   key: 'project-progress-update',
   ...rest
 });
