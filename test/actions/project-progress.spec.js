@@ -43,7 +43,6 @@ describe('updateProjectProgress', () => {
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
-      data: { foo: 'bar' },
     })).toMatchSnapshot();
   });
 });

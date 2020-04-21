@@ -52,13 +52,11 @@ Object {
     "suffix": "PROJECT_PROGRESS_UPDATE",
   },
   "payload": Object {
-    "data": Object {
-      "foo": "bar",
-    },
+    "data": undefined,
     "headers": undefined,
-    "method": "GET",
+    "method": "PUT",
     "params": undefined,
-    "url": "/cohorts/someone/projects/someone/",
+    "url": "/cohorts/someone/projects/someone/progress/undefined/ready",
   },
   "type": "@@api-client/API_REQUEST/PROJECT_PROGRESS_UPDATE",
 }
